@@ -19,7 +19,7 @@ export default function Home() {
 
     setLoading(true);
     try {
-      const res = await fetch('http://localhost:8000/parse_resume', {
+      const res = await fetch(process.env.NEXT_PUBLIC_FASTAPI_RUNNING_URL, {
         method: 'POST',
         body: formData,
       });
